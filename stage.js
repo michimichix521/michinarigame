@@ -7,17 +7,17 @@ class Stage
         this.fs = frontscreen;
         this.bs = backscreen;
 
-        canvas=document.getElementById("canvas").getContext("2d");
-        canvas.fillStyle=bs;
-        canvas.fillRect(0, 0, this.x, this.y);
+        this.canvas=document.getElementById("canvas").getContext("2d");
+        this.canvas.fillStyle=bs;
+        this.canvas.fillRect(0, 0, this.x, this.y);
     }
 
     draw_canvas(){
-        canvas.fillStyle=this.bs;
-        canvas.fillRect(0, 0, this.x, this.y);
+        this.canvas.fillStyle=this.bs;
+        this.canvas.fillRect(0, 0, this.x, this.y);
     
-        canvas.fillStyle=this.fs;
-        canvas.fillRect(0, 100, this.x, this.y-100);
+        this.canvas.fillStyle=this.fs;
+        this.canvas.fillRect(0, 100, this.x, this.y-100);
     
     }
 }
