@@ -17,7 +17,7 @@ class Player{
 	}
 
 	showImage(){
-		this.canvas.drawImage(this.image,this.x,this.y,50,50);
+		this.canvas.drawImage(this.image,this.x+25,this.y+25,50,50);
 	}
 
 	move(){
