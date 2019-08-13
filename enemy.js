@@ -7,6 +7,8 @@ class Enemy
 		this.y=y;
 
 		this.readImage(image);
+		this.rx;
+		this.ry;
 		this.rd;
 	}
 
@@ -22,27 +24,27 @@ class Enemy
 	move()
 	{
 		this.rd = Math.floor(Math.random() * Math.floor(5));
-		switch(rd){
+		switch(this.rd){
 			case 0:
 				break;
 			case 1:	//up
-				if(ry-2>=100){
-					ry-=2;
+				if(this.ry-2>=100){
+					this.ry-=2;
 				}
 				break;
 			case 2:	//dowm
-				if(ry+2<=350){
-					ry+=2;
+				if(this.ry+2<=350){
+					this.ry+=2;
 				}	
 				break;
 			case 3:	//right
-				if(rx+2<=650){
-					rx+=2;
+				if(this.rx+2<=650){
+					this.rx+=2;
 				}
 				break;
 			case 4:	//left
-				if(rx-2>=0){
-					rx-=2;
+				if(this.rx-2>=0){
+					this.rx-=2;
 				}
 				break;
 		}
