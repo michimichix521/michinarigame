@@ -1,7 +1,7 @@
-window.onload=init_time;
-var id=window.setInterval(update,50);
+window.onload=init_timeMichi;
+var michiId=window.setInterval(update,50);
 
-function init_time(){
+function init_timeMichi(){
 	console.log("1度だけのmichi!");
 }
 
