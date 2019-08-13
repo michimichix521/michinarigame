@@ -20,7 +20,7 @@ class Player{
 		this.canvas.drawImage(this.image,this.x,this.y,50,50);
 	}
 
-	move{
+	move(){
 		if(this.ArrowUp){
 			if(this.y-2>=100){
 				this.y-=2;
