@@ -1,21 +1,21 @@
 class Stage
 {
-    constructor(canvas, x, y, frontground, background){
+    constructor(canvas, x, y, fgcolor, bgcolor){
         this.canvas = canvas;
         this.x = x;
         this.y = y;
-        this.fg = frontground;
-        this.bg = background;
+        this.fgcolor = frontground;
+        this.bgcolor = background;
 
-        this.canvas.fillStyle=this.bg;
+        this.canvas.fillStyle=this.bgcolor;
         this.canvas.fillRect(0, 0, this.x, this.y);
     }
 
     draw_canvas(){
-        this.canvas.fillStyle=this.bg;
+        this.canvas.fillStyle=this.bgcolor;
         this.canvas.fillRect(0, 0, this.x, this.y);
     
-        this.canvas.fillStyle=this.fg;
+        this.canvas.fillStyle=this.fgcolor;
         this.canvas.fillRect(0, 100, this.x, this.y-100);
     
     }
