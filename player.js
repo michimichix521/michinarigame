@@ -17,27 +17,29 @@ class Player{
 	}
 
 	showImage(){
-		this.canvas.drawImage(this.image,this.x-25,this.y-25,50,50);
+		this.x=this.x-25;
+		this.y=this.y-25;
+		this.canvas.drawImage(this.image,this.x,this.y,50,50);
 	}
 
 	move(){
 		if(this.ArrowUp){
-			if(this.y-2>=125){
+			if(this.y-2>=100){
 				this.y-=2;
 			}
 		}
 		if(this.ArrowDown){
-			if(this.y+2<=375){
+			if(this.y+2<=350){
 				this.y+=2;
 			}
 		}
 		if(this.ArrowRight){
-			if(this.x+2<=675){
+			if(this.x+2<=650){
 				this.x+=2;
 			}
 		}
 		if(this.ArrowLeft){
-			if(this.x-2>=25){
+			if(this.x-2>=0){
 				this.x-=2;
 			}
 		}
