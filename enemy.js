@@ -21,22 +21,22 @@ class Enemy
 
 	move(px, py)
 	{
-		if(this.y > py){
+		if(this.y > py){	//up
 			if(this.y-2>=100){
 				this.y-=2;
 			}
 		}
-		if(this.y < py){
+		if(this.y < py){	//down
 			if(this.y+2<=350){
 				this.y+=2;
 			}	
 		}
-		if(this.x < px){
+		if(this.x < px){	//right
 			if(this.x+2<=650){
 				this.x+=2;
 			}
 		}
-		if(this.x > px){
+		if(this.x > px){	//left
 			if(this.x-2>=0){
 				this.x-=2;
 			}
