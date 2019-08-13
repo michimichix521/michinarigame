@@ -30,7 +30,7 @@ function update()
 	player.showImage();
 	player.move();
 	enemy.showImage();
-	enemy.move(player.x-25,player.y-25);
+	enemy.move(player.x,player.y);
 }
 
 
