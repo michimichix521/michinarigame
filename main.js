@@ -7,12 +7,15 @@ var stage;
 function init_time()
 {
 	var canvas;
-	var player_image = "img/player_attack.png";
-	var frontscreen = "lightgreen";
-	var backscreen = "black";
+	canvas = document.getElementById("canvas").getContext("2d");
 
-	player = new Player(canvas, player_image, 350, 250, frontscreen, backscreen);
-	stage = new Stage(canvas, 700, 500);
+	var player_image = "img/player_attack.png";
+	var frontground = "lightgreen";
+	var background = "black";
+
+	player = new Player(canvas, player_image, 350, 250,);
+	stage = new Stage(canvas, 700, 500,
+						frontground, background);
 	
 }
 
