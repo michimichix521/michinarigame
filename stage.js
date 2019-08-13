@@ -16,7 +16,7 @@ class Stage
         this.canvas.fillRect(0, 0, this.x, this.y);
     
         this.canvas.fillStyle=this.fgcolor;
-        this.canvas.fillRect(0, 100, this.x, this.y-100);
+        this.canvas.fillRect(0, 100, this.x, this.y - 200);
     
     }
 }
