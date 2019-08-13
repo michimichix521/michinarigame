@@ -43,17 +43,4 @@ class Player{
 		}
 	}
 
-	keydown(event){
-		if(event.keyCode==38){this.ArrowUp=true;}
-		if(event.keyCode==40){this.ArrowDown=true;}
-		if(event.keyCode==39){this.ArrowRight=true;}
-		if(event.keyCode==37){this.ArrowLeft=true;}
-	}
-
-	keyup(event){
-		if(event.keyCode==38){this.ArrowUp=false;}
-		if(event.keyCode==40){this.ArrowDown=false;}
-		if(event.keyCode==39){this.ArrowRight=false;}
-		if(event.keyCode==37){this.ArrowLeft=false;}
-	}
 }

@@ -23,11 +23,29 @@ function init_time()
 function update()
 {
 
-	document.onkeydown=player.keydown;
-	document.onkeyup=player.keyup;
+	document.onkeydown=keydown;
+	document.onkeyup=keyup;
 
 	stage.draw_canvas();
 	player.showImage();
 	player.move();
 	enemy.showImage();
 }
+
+
+function keydown(event){
+	if(event.keyCode==38){player.ArrowUp=true;}
+	if(event.keyCode==40){player.ArrowDown=true;}
+	if(event.keyCode==39){player.ArrowRight=true;}
+	if(event.keyCode==37){player.ArrowLeft=true;}
+}
+
+function keyup(event){
+	if(event.keyCode==38){player.ArrowUp=false;}
+	if(event.keyCode==40){player.ArrowDown=false;}
+	if(event.keyCode==39){player.ArrowRight=false;}
+	if(event.keyCode==37){player.ArrowLeft=false;}
+	}
+
+
+
