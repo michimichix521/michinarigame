@@ -4,8 +4,8 @@ class Stage
         this.canvas = canvas;
         this.x = x;
         this.y = y;
-        this.fgcolor = frontground;
-        this.bgcolor = background;
+        this.fgcolor = fgcolor;
+        this.bgcolor = bgcolor;
 
         this.canvas.fillStyle=this.bgcolor;
         this.canvas.fillRect(0, 0, this.x, this.y);
