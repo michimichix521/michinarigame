@@ -18,13 +18,14 @@ function init_time()
 	enemy = new Enemy(canvas, enemy_image, 150, 250);
 	player = new Player(canvas, player_image, 350, 250);
 
-	document.onkeydown=player.keydown;
-	document.onkeyup=player.keyup;
-
 }
 
 function update()
 {
+
+	document.onkeydown=player.keydown;
+	document.onkeyup=player.keyup;
+
 	stage.draw_canvas();
 	player.showImage();
 	player.move();
