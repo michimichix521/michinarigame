@@ -20,6 +20,6 @@ function init_time()
 function update()
 {
 	stage.draw_canvas();
-	player.showimage();
+	player.showImage();
 	
 }
