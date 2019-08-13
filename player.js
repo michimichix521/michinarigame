@@ -2,9 +2,14 @@ class Player{
 	constructor(canvas,image,x,y){
 		this.canvas=canvas;
 		this.image=new Image();
-		this.image.src=image;
 		this.x=x;
 		this.y=y;
+
+		this.readImage(image);
+	}
+
+	readImage(image){
+		this.image.src=image;
 	}
 
 	showImage(){
