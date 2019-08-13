@@ -1,17 +1,23 @@
 class Stage
 {
-    constructor(){
+    constructor(canvas, x, y, frontscreen, backscreen){
+        this.canvas = canvas;
+        this.x = x;
+        this.y = y;
+        this.fs = frontscreen;
+        this.bs = backscreen;
+
         canvas=document.getElementById("canvas").getContext("2d");
-        canvas.fillStyle="black";
-        canvas.fillRect(0,0,700,500);
+        canvas.fillStyle=bs;
+        canvas.fillRect(0, 0, this.x, this.y);
     }
 
-    canvas(){
-        canvas.fillStyle="black";
-        canvas.fillRect(0,0,700,500);
+    draw_canvas(){
+        canvas.fillStyle=this.bs;
+        canvas.fillRect(0, 0, this.x, this.y);
     
-        canvas.fillStyle="lightgreen";
-        canvas.fillRect(0,100,700,300);
+        canvas.fillStyle=this.fs;
+        canvas.fillRect(0, 100, this.x, this.y-100);
     
     }
 }

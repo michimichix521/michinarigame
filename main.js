@@ -2,32 +2,23 @@ window.onload=init_time; //最初にロードされる
 var id=window.setInterval(update,10); //アップロードされる
 
 var player;
-var stage;
-var canvas;	
+var stage;	
 
 function init_time()
 {
+	var canvas;
 	var player_image = "img/player_attack.png";
-	
-	player = new Player(canvas, player_image, 350, 250);
-	stage = new Stage();
+	var frontscreen = "lightgreen";
+	var backscreen = "black";
+
+	player = new Player(canvas, player_image, 350, 250, frontscreen, backscreen);
+	stage = new Stage(canvas, 700, 500);
 	
 }
 
 function update()
 {
-	stage.canvas();
+	stage.draw_canvas();
 	player.showimage();
-	
-}
-
-function canvas()
-{	
-	canvas.fillStyle="black";
-	canvas.fillRect(0,0,700,500);
-
-	canvas.fillStyle="lightgreen";
-	canvas.fillRect(0,100,700,300);
-
 	
 }
