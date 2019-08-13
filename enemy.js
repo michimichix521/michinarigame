@@ -7,8 +7,8 @@ class Enemy
 		this.y=y;
 
 		this.readImage(image);
-		this.rx;
-		this.ry;
+		this.x;
+		this.y;
 		this.rd;
 	}
 
@@ -28,23 +28,23 @@ class Enemy
 			case 0:
 				break;
 			case 1:	//up
-				if(this.ry-2>=100){
-					this.ry-=2;
+				if(this.y-2>=100){
+					this.y-=2;
 				}
 				break;
 			case 2:	//dowm
-				if(this.ry+2<=350){
-					this.ry+=2;
+				if(this.y+2<=350){
+					this.y+=2;
 				}	
 				break;
 			case 3:	//right
-				if(this.rx+2<=650){
-					this.rx+=2;
+				if(this.x+2<=650){
+					this.x+=2;
 				}
 				break;
 			case 4:	//left
-				if(this.rx-2>=0){
-					this.rx-=2;
+				if(this.x-2>=0){
+					this.x-=2;
 				}
 				break;
 		}
