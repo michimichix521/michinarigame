@@ -7,8 +7,6 @@ class Enemy
 		this.y=y;
 
 		this.readImage(image);
-		this.x;
-		this.y;
 		this.rd;
 	}
 
@@ -21,9 +19,29 @@ class Enemy
 		this.canvas.drawImage(this.image,this.x,this.y,50,50);
 	}
 
-	move()
+	move(px, py)
 	{
-		this.rd = Math.floor(Math.random() * Math.floor(5));
+		if(this.y > py){
+			if(this.y-2>=100){
+				this.y-=2;
+			}
+		}
+		if(this.y < py){
+			if(this.y+2<=350){
+				this.y+=2;
+			}	
+		}
+		if(this.x < px){
+			if(this.x+2<=650){
+				this.x+=2;
+			}
+		}
+		if(this.x > px){
+			if(this.x-2>=0){
+				this.x-=2;
+			}
+		}
+/*		this.rd = Math.floor(Math.random() * Math.floor(5));
 		switch(this.rd){
 			case 0:
 				break;
@@ -47,6 +65,6 @@ class Enemy
 					this.x-=2;
 				}
 				break;
-		}
+*/
 	}
 }
