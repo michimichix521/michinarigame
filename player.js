@@ -16,24 +16,31 @@ class Player{
 		this.readImage(image);
 	}
 
-	readImage(image){
+	readImage(image){//画像の読み込み
 		for(var i=0;i<image.length;i++){
 			this.image[i]=new Image();
 			this.image[i].src=image[i];
 		}
 	}
 
-	showImage(){
+	showImage(){//画像の表示
 		this.canvas.drawImage(this.image[this.imageChangeNumber],this.x-25,this.y-25,50,50);
 	}
 
-	showHP(){
+	showHP(){//HPの表示
 		this.canvas.fillStyle="white";
 		this.canvas.font="48px serif";
 		this.canvas.fillText(this.HP,10,50);
 	}
 
-	move(){
+	hitJudge(ex,ey){//敵との当たり判定
+		var distance=Math.sqrt((ex-this.x)**2+(ey-this.y)**2);
+		if(distance<50){
+			this.HP-=1;
+		}
+	}
+
+	move(){//playerの動き(キー操作)
 		if(this.ArrowUp){
 			if(this.y-2>=125){
 				this.y-=2;
