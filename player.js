@@ -41,30 +41,10 @@ class Player{
 	}
 
 	move(){//playerの動き(キー操作)
-		if(this.ArrowUp){
-			if(this.y-2>=125){
-				this.y-=2;
-			}
-		}
-
-		if(this.ArrowDown){
-			if(this.y+2<=375){
-				this.y+=2;
-			}
-		}
-
-		if(this.ArrowRight){
-			if(this.x+2<=675){
-				this.x+=2;
-			}
-		}
-
-		if(this.ArrowLeft){
-			if(this.x-2>=25){
-				this.x-=2;
-			}
-		}
-
+		if(this.ArrowUp && this.y-2>=125){this.y-=2;}
+		if(this.ArrowDown && this.y+2<=375){this.y+=2;}
+		if(this.ArrowRight && this.x+2<=675){this.x+=2;}
+		if(this.ArrowLeft && this.x-2>=25){this.x-=2;}
 		if(this.Space){
 			if(this.imageChangeNumber==0){
 				this.imageChangeNumber=1;
