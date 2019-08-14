@@ -21,7 +21,7 @@ class Player{
 	}
 
 	showImage(){//画像の表示
-		this.canvas.drawImage(this.image[this.imageChangeNumber],this.x-25,this.y-25,50,50);
+		this.canvas.drawImage(this.image[this.imageChangeNumber],this.x-25,this.y-25,-50,-50);
 	}
 
 	showHP(){//HPの表示
