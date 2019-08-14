@@ -15,9 +15,11 @@ function init_time()
 	var bgcolor = "black";
 
 	stage = new Stage(canvas, 700, 500, fgcolor, bgcolor);
-	enemy[0] = new Enemy(canvas, enemy_image, 150, 250);
-	enemy[1] = new Enemy(canvas, enemy_image, 180, 250);
-	enemy[2] = new Enemy(canvas, enemy_image, 120, 250);
+	for(var i = 0; i < 3; i++){
+		enemy[i] = new Enemy(canvas, enemy_image, 150, 250, i);
+		enemy[i] = new Enemy(canvas, enemy_image, 180, 250, i);
+		enemy[i] = new Enemy(canvas, enemy_image, 120, 250, i);
+	}
 	player = new Player(canvas, player_image, 350, 250);
 
 }
