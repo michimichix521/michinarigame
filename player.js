@@ -33,6 +33,13 @@ class Player{
 		this.canvas.fillText(this.HP,10,50);
 	}
 
+	hitJudge(ex,ey){
+		var distance=Math.sqrt((ex-this.x)**2+(ey-this.y)**2);
+		if(distance<=50){
+			this.HP-=1;
+		}
+	}
+
 	move(){
 		if(this.ArrowUp){
 			if(this.y-2>=125){
