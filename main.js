@@ -38,7 +38,7 @@ function update()
 		player.showImage();
 		player.move();
 		for(var i=0; i<enemy.length;i++){
-			player.hitJudge(enemy[i].x,enemy[i].y);
+			player.hitJudge(enemy[i]);
 		}
 	}
 	player.showHP();
