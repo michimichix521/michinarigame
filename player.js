@@ -27,7 +27,7 @@ class Player{
 		this.canvas.drawImage(this.image[this.imageChangeNumber],this.x-25,this.y-25,50,50);
 	}
 
-	showHP{
+	showHP(){
 		this.canvas.fillStyle="white";
 		this.canvas.font="48px serif";
 		this.canvas.fillText(this.HP,10,10);
