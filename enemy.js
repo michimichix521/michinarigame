@@ -9,6 +9,7 @@ class Enemy
 
 		this.readImage(image);
 		this.HP = 1;
+		this.setActive = true;
 		this.rd;
 		this.ex;
 		this.ey;
