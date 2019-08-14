@@ -42,7 +42,7 @@ function update()
 
 	//enemy
 	for(var i = 0; i < 3; i++){
-		enemy[i].showImage();
+		enemy[i].showImage(player.x,player.y);
 		enemy[i].move(player.x,player.y);
 	}
 }

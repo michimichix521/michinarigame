@@ -16,7 +16,7 @@ class Enemy
 	{
 		this.image.src=image;
 	}
-	showImage()
+	showImage(px, py)
 	{
 		this.canvas.drawImage(this.image,this.x-25,this.y-25,50,50);
 	}
