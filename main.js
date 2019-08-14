@@ -25,12 +25,21 @@ function init_time()
 function update()
 {
 
+
 	document.onkeydown=keydown;
 	document.onkeyup=keyup;
 
 	stage.draw_canvas();
+
+	//player
 	player.showImage();
 	player.move();
+
+
+
+
+
+	//enemy
 	enemy.showImage();
 	enemy.move(player.x,player.y);
 }
