@@ -25,9 +25,9 @@ class Enemy
 		this.canvas.drawImage(this.image,this.x-25,this.y-25,50,50);
 	}
 
-	hitJudge(px,py){//敵との当たり判定
-		var distance=Math.sqrt((px-this.x)**2+(py-this.y)**2);
-		if(distance<50){
+	hitJudge(player){//敵との当たり判定
+		var distance=Math.sqrt((player.x-this.x)**2+(player.y-this.y)**2);
+		if(distance<50 && player.imageChangeNumber == 1){
 			this.HP-=1;
 			if(this.HP < 0){
 				this.setActive = false;
