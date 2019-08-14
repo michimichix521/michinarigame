@@ -34,7 +34,7 @@ class Player{
 	}
 
 	hitJudge(enemy){//敵との当たり判定
-		var distance=Math.sqrt((ex-this.x)**2+(ey-this.y)**2);
+		var distance=Math.sqrt((enemy.x-this.x)**2+(enemy.y-this.y)**2);
 		if(distance<50 && enemy.setActive){
 			this.HP-=1;
 		}
