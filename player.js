@@ -7,10 +7,7 @@ class Player{
 		this.y=y;
 		this.HP=100;
 
-		this.ArrowUp=false;
-		this.ArrowDown=false;
-		this.ArrowRight=false;
-		this.ArrowLeft=false;
+		this.ArrowUp=this.ArrowDown=this.ArrowRight=this.ArrowLeft=false;
 		this.Space=false;
 
 		this.readImage(image);
