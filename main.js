@@ -48,7 +48,7 @@ function update()
 
 	//enemy
 	for(var i = 0; i < 3; i++){
-		if(enemy[i].HP>0){
+		if(enemy[i].setActive){
 			enemy[i].showImage(player.x,player.y);
 			enemy[i].move(player.x,player.y);
 			enemy[i].hitJudge(player.x,player.y);
