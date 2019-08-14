@@ -16,7 +16,7 @@ class Player{
 		this.readImage(image);
 	}
 
-	readImage(image){
+	readImage(image){//画像の読み込み
 		for(var i=0;i<image.length;i++){
 			this.image[i]=new Image();
 			this.image[i].src=image[i];
