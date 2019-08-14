@@ -29,6 +29,10 @@ class Enemy
 		var distance=Math.sqrt((px-this.x)**2+(py-this.y)**2);
 		if(distance<50){
 			this.HP-=1;
+			if(this.HP < 0){
+				this.setActive = false;
+			}
+			
 		}
 	}
 	move(px, py)
