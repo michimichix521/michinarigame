@@ -1,10 +1,11 @@
 class Enemy
 {
-	constructor(canvas,image,x,y){
+	constructor(canvas,image,x,y,enlv){
 		this.canvas=canvas;
 		this.image=new Image();
 		this.x=x;
 		this.y=y;
+		this.enlv;
 
 		this.readImage(image);
 		this.rd;
@@ -16,7 +17,7 @@ class Enemy
 	{
 		this.image.src=image;
 	}
-	showImage()
+	showImage(px, py)
 	{
 		this.canvas.drawImage(this.image,this.x-25,this.y-25,50,50);
 	}
