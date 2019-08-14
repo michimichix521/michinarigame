@@ -35,7 +35,7 @@ class Player{
 
 	hitJudge(ex,ey){//敵との当たり判定
 		var distance=Math.sqrt((ex-this.x)**2+(ey-this.y)**2);
-		if(distance<50){
+		if(distance<50 && this.HP>0){
 			this.HP-=1;
 		}
 	}
