@@ -1,3 +1,4 @@
+//test
 class Enemy
 {
 	constructor(canvas,image,x,y){
