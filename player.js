@@ -5,6 +5,8 @@ class Player{
 		this.imageChangeNumber=0;
 		this.x=x;
 		this.y=y;
+		this.HP=100;
+
 		this.ArrowUp=false;
 		this.ArrowDown=false;
 		this.ArrowRight=false;
@@ -23,6 +25,12 @@ class Player{
 
 	showImage(){
 		this.canvas.drawImage(this.image[this.imageChangeNumber],this.x-25,this.y-25,50,50);
+	}
+
+	showHP{
+		this.canvas.fillStyle="white";
+		this.canvas.font="48px serif";
+		this.canvas.fillText(this.HP,10,10);
 	}
 
 	move(){
