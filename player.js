@@ -30,7 +30,7 @@ class Player{
 	showHP(){
 		this.canvas.fillStyle="white";
 		this.canvas.font="48px serif";
-		this.canvas.fillText(this.HP,10,10);
+		this.canvas.fillText(this.HP,10,50);
 	}
 
 	move(){
