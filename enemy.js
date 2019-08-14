@@ -5,7 +5,7 @@ class Enemy
 		this.image=new Image();
 		this.x=x;
 		this.y=y;
-		this.enlv;
+		this.enlv=enlv;
 
 		this.readImage(image);
 		this.rd;
