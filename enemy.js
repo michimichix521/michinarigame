@@ -3,9 +3,12 @@ class Enemy
 	constructor(canvas,image,x,y,enlv){
 		this.canvas=canvas;
 		this.image=new Image();
-		this.x=x;
-		this.y=y;
+		this.X=x;
+		this.Y=y;
 		this.enlv=enlv;
+
+		this.x = this.X;
+		this.y = this.Y
 
 		this.readImage(image);
 		this.HP = 1;
@@ -13,6 +16,13 @@ class Enemy
 		this.rd;
 		this.ex;
 		this.ey;
+	}
+
+	init(){
+		this.x = this.X;
+		this.y = this.Y;
+		this.HP = 1;
+		this.setActive = true;
 	}
 
 	readImage(image)
@@ -31,8 +41,10 @@ class Enemy
 			this.HP-=1;
 			if(this.HP < 0){
 				this.setActive = false;
-			}
-			
+			}	
+		}
+		if(this.setActive == false){
+			this.init();
 		}
 	}
 	move(px, py)
