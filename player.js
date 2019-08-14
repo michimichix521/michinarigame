@@ -21,7 +21,6 @@ class Player{
 	}
 
 	showImage(){//画像の表示
-		this.canvas.rotate(45/180*Math.PI);
 		this.canvas.drawImage(this.image[this.imageChangeNumber],this.x-25,this.y-25,50,50);
 	}
 
