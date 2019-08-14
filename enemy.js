@@ -41,11 +41,9 @@ class Enemy
 			this.HP-=1;
 			if(this.HP < 0){
 				this.setActive = false;
-			}
-			
+			}	
 		}
-		if(this.setActive){}
-		else{
+		if(this.setActive == false){
 			init();
 		}
 	}
