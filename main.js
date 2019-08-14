@@ -14,12 +14,9 @@ function init_time()
 	var fgcolor = "lightgreen";
 	var bgcolor = "black";
 
-	console.log("michi");
-
 	stage = new Stage(canvas, 700, 500, fgcolor, bgcolor);
 	enemy = new Enemy(canvas, enemy_image, 150, 250);
 	player = new Player(canvas, player_image, 350, 250);
-	console.log("inari");
 
 }
 
