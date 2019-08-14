@@ -1,7 +1,7 @@
 class Player{
 	constructor(canvas,image,x,y){
 		this.canvas=canvas;
-		this.image=new Image();
+		this.image=new Array(image.length);
 		this.x=x;
 		this.y=y;
 		this.ArrowUp=false;
@@ -13,11 +13,14 @@ class Player{
 	}
 
 	readImage(image){
-		this.image.src=image;
+		for(var i=0;i<image.length;i++){
+			this.image[i]=new Image();
+			this.image[i].src=image[i];
+		}
 	}
 
 	showImage(){
-		this.canvas.drawImage(this.image,this.x-25,this.y-25,50,50);
+		this.canvas.drawImage(this.image[0],this.x-25,this.y-25,50,50);
 	}
 
 	move(){
