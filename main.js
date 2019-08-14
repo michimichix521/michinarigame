@@ -37,11 +37,11 @@ function update()
 	if(player.HP>0){
 		player.showImage();
 		player.move();
+		for(var i=0; i<enemy.length;i++){
+			player.hitJudge(enemy[i].x,enemy[i].y);
+		}
 	}
 	player.showHP();
-	for(var i=0; i<enemy.length;i++){
-		player.hitJudge(enemy[i].x,enemy[i].y);
-	}
 
 
 
