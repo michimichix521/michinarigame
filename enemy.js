@@ -8,6 +8,7 @@ class Enemy
 		this.enlv=enlv;
 
 		this.readImage(image);
+		this.HP = 1;
 		this.rd;
 		this.ex;
 		this.ey;
@@ -19,9 +20,16 @@ class Enemy
 	}
 	showImage(px, py)
 	{
+		
 		this.canvas.drawImage(this.image,this.x-25,this.y-25,50,50);
 	}
 
+	hitJudge(px,py){//敵との当たり判定
+		var distance=Math.sqrt((px-this.x)**2+(py-this.y)**2);
+		if(distance<50){
+			this.HP-=1;
+		}
+	}
 	move(px, py)
 	{
 		switch(this.enlv){
@@ -33,6 +41,7 @@ class Enemy
 				break;
 		}
 	}
+
 	moveLv0(px,py)
 	{
 		if(this.y > py){	//up
