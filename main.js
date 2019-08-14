@@ -9,7 +9,7 @@ function init_time()
 {
 	var canvas = document.getElementById("canvas").getContext("2d");;
 
-	var player_image = "img/player.png";
+	var player_image = "img/player.png","img/player_attack.png";
 	var enemy_image = "img/enemy.png";
 	var fgcolor = "lightgreen";
 	var bgcolor = "black";
