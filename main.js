@@ -51,8 +51,8 @@ function update()
 		if(enemy[i].setActive){
 			enemy[i].showImage(player.x,player.y);
 			enemy[i].move(player.x,player.y);
-			enemy[i].hitJudge(player);
 		}
+		enemy[i].hitJudge(player);
 	}
 }
 
