@@ -34,6 +34,7 @@ function update()
 	//player
 	player.showImage();
 	player.move();
+	player.showHP();
 
 
 
