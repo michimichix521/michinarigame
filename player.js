@@ -20,7 +20,7 @@ class Player{
 	}
 
 	showImage(){
-		this.canvas.drawImage(this.image[0],this.x-25,this.y-25,50,50);
+		this.canvas.drawImage(this.image[1],this.x-25,this.y-25,50,50);
 	}
 
 	move(){
