@@ -24,7 +24,7 @@ class Player{
 	}
 
 	showImage(){//画像の表示
-		this.canvas.drawImage(this.image[this.imageChangeNumber],this.x-25,this.y-25,-50,50);
+		this.canvas.drawImage(this.image[this.imageChangeNumber],this.x-25,this.y-25,50,50);
 	}
 
 	showHP(){//HPの表示
@@ -33,9 +33,9 @@ class Player{
 		this.canvas.fillText(this.HP,10,50);
 	}
 
-	hitJudge(ex,ey){//敵との当たり判定
+	hitJudge(enemy){//敵との当たり判定
 		var distance=Math.sqrt((ex-this.x)**2+(ey-this.y)**2);
-		if(distance<50){
+		if(distance<50 && enemy.setActive){
 			this.HP-=1;
 		}
 	}
