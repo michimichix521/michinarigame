@@ -34,7 +34,9 @@ function update()
 	stage.draw_canvas();
 
 	//player
-	player.showImage();
+	if(player.HP>0){
+		player.showImage();
+	}
 	player.move();
 	player.showHP();
 	for(var i=0; i<enemy.length;i++){
