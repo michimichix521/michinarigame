@@ -44,7 +44,7 @@ class Enemy
 			}	
 		}
 		if(this.setActive == false){
-			init();
+			this.init();
 		}
 	}
 	move(px, py)
