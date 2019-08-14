@@ -42,10 +42,11 @@ class Enemy
 			if(this.HP < 0){
 				this.setActive = false;
 			}
-			if(this.setActive){}
-			else{
-				init();
-			}
+			
+		}
+		if(this.setActive){}
+		else{
+			init();
 		}
 	}
 	move(px, py)
