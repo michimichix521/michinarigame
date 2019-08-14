@@ -48,6 +48,7 @@ function keydown(event){
 	if(event.keyCode==40){player.ArrowDown=true;}
 	if(event.keyCode==39){player.ArrowRight=true;}
 	if(event.keyCode==37){player.ArrowLeft=true;}
+	if(event.keyCode==32){player.Space=true;}
 }
 
 function keyup(event){
@@ -55,6 +56,7 @@ function keyup(event){
 	if(event.keyCode==40){player.ArrowDown=false;}
 	if(event.keyCode==39){player.ArrowRight=false;}
 	if(event.keyCode==37){player.ArrowLeft=false;}
+	if(event.keyCode==32){player.Space=false;}
 }
 
 
