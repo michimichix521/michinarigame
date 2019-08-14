@@ -9,6 +9,7 @@ class Player{
 		this.ArrowDown=false;
 		this.ArrowRight=false;
 		this.ArrowLeft=false;
+		this.Space=false;
 
 		this.readImage(image);
 	}
@@ -45,6 +46,15 @@ class Player{
 				this.x-=2;
 			}
 		}
+
+		if(this.Space){
+			if(this.imageChangeNumber==0){
+				this.imageChangeNumber=1;
+			}else{
+				this.imageChangeNumber=0;
+			}
+		}
+
 	}
 
 }
