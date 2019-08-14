@@ -13,7 +13,6 @@ function init_time()
 	var enemy_image = "img/enemy.png";
 	var fgcolor = "lightgreen";
 	var bgcolor = "black";
-	var enemylevel;
 
 	stage = new Stage(canvas, 700, 500, fgcolor, bgcolor);
 	enemy = new Enemy(canvas, enemy_image, 150, 250);
