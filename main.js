@@ -3,7 +3,7 @@ var id=window.setInterval(update,10); //アップロードされる
 
 var player;
 var stage;
-var enemy;
+var enemy = new Array[3];
 
 function init_time()
 {
